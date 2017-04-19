@@ -1,0 +1,48 @@
+def area(x ,y ):
+    return x*y
+
+def area_coroa(r1,r2):
+    return (3.14*(r1*r1))-(3.14*(r2*r2))
+    
+def divisao(int1,int2):
+    return int1//int2,int1%int2
+    
+def parabola(a,b,c,x):
+    return float(a*(x*x)+b*x+c)
+    
+def gorjeta(v):
+	return v*0.1
+  
+def media(x,y):
+    return (x+y)/2
+    
+def media_ponderada(n1,n2,p1,p2):
+    return ((n1*p1)+(n2*p2))/(p1+p2)
+    
+def correnteza(v_correnteza, l_rio, v_barco):
+    return float((l_rio/v_barco)*v_correnteza)
+    
+def saldo(saldo_i, meses, juros):
+    return saldo_i*(1+juros*meses)
+    
+def erro_pg(q, n,a1=1.0):
+	si=1/(1-q)
+	sn=a1*(1-q**n)/(1-q)
+	return si-sn
+  
+def tempo(hora_p,min_p,seg_p,hora_c,min_c,seg_c):
+    t0=hora_p*3600+min_p*60+seg_p
+    tf=hora_c*3600+min_c*60+seg_c
+    tf-=t0
+    hora_c=tf//3600
+    tf-=hora_c*3600
+    min_c=tf//60
+    tf-=min_c*60
+    seg_c=tf
+    return hora_c,min_c,seg_c
+    
+def conta(v,p):
+    return v*0.1 , (v+(v*0.1))/p
+    
+def area_cubo(a):
+    return 6*a**2
