@@ -1,0 +1,42 @@
+def quant_palavras(frase):
+    return len(str.split(frase))
+    
+def substitui(frase, palavra, pos1, pos2):
+    y=frase[pos1:pos2]
+    if palavra in y:
+        t=str.partition(frase,palavra)
+        return t[0]+t[2]
+    else:
+        return frase
+        
+def replace(x):
+    s=str.split(x)
+    return str.join("#",s)
+    
+def substring(s,c):
+    y=str.find(s,c)
+    if c in s:
+        return s[y+1:]
+    else:
+        return "Caractere não encontrado"
+        
+def tipos(tupla):
+    l1=[]
+    l2=[]
+    if type(tupla[0])==str:
+        list.append(l1,tupla[0])
+    if type(tupla[0])!=str:
+        list.append(l2,tupla[0])
+    if type(tupla[1])==str:
+        list.append(l1,tupla[1])
+    if type(tupla[0])!=str:
+        list.append(l2,tupla[1])
+    if type(tupla[2])==str:
+        list.append(l1,tupla[2])
+    if type(tupla[2])!=str:
+        list.append(l2,tupla[2])
+    return l1,l2
+    
+def intercala(lista1, lista2):
+    l3=[lista1[0],lista2[0],lista1[1],lista2[1],lista1[2],lista2[2]]
+    return l3
