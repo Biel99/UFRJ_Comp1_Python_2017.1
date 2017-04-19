@@ -1,0 +1,51 @@
+def inverso(x):
+    y=x.split()
+    y.reverse()
+    return ' '.join(y)
+    
+def ordena(x):
+    y=x.split()
+    y.sort()
+    return ' '.join(y)
+    
+def troca_i(x):
+    return x.replace('a','i').replace('e','i').replace('o','i').replace('u','i').replace('é','i').replace('ã','i').replace('ó','i').replace('ú','i')
+    
+def encontre(f,pa,po):
+    if pa in f:
+        y=str.partition(f,pa)
+        return str(y[0]+str.upper(pa)+y[2])
+    else:
+        y=f.split()
+        y.insert(po,pa)
+        return ' '.join(y)
+        
+def faltas(l):
+    return int(l[0][2][0]+l[1][2][0]+l[2][2][0]+l[0][2][1]+l[1][2][1]+l[2][2][1])
+    
+def adiciona(L, n):
+    L.append(n)
+    L.sort()
+    return L
+    
+def maiores(L,n):
+    return [i for i in L if i>n]
+    
+def maximo(x):
+    x.sort()
+    return x[-1]
+    
+def media(x):
+    y=float(sum(x)/len(x))
+    c=[i for i in x if i>=y]
+    return y,sorted(c)
+    
+def colchao(medidas,H,L):
+    if medidas[1]<=L and medidas[2]<=H:
+        return True
+    if medidas[0]<=L and medidas[1]<=H:
+        return True
+    if medidas[0]<=L and medidas[2]<=H:
+        return True
+    else:
+        return False
