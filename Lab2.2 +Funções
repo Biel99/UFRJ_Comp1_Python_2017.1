@@ -1,0 +1,54 @@
+def media2(n1,n2):
+    return (n1+n2)/2
+def media4(n1,n2,n3,n4):
+    return media2(media2(n1,n2),media2(n3,n4))
+    
+def bombons(d,p):
+    return int(d/p),float(d%p)
+    
+import math as m
+def hipotenusa(c1,c2):
+    return m.sqrt(c1**2+c2**2)
+    
+import math as m
+def distancia(x1,y1,x2,y2):
+    return m.sqrt((x2-x1)**2+(y2-y1)**2)
+    
+import math as m
+def hipotenusa(c1,c2):
+    return m.sqrt(c1**2+c2**2)
+def perimetro(c1,c2):
+    return c1+c2+hipotenusa(c1,c2)
+    
+def comprimento(r):
+    import math
+    return 2*math.pi*r
+    
+def comprimento(r):
+    import math
+    return 2*math.pi*r
+def voltas(raio,distancia):
+    return float(distancia/comprimento(raio))
+    
+import math
+def discriminante(a,b,c):
+    return float(b**2-(4*a*c))
+def raiz(a,b,c):
+    x1= float((-b+math.sqrt(discriminante(a,b,c)))/(2*a))
+    x2= float((-b-math.sqrt(discriminante(a,b,c)))/(2*a))
+    return x1,x2
+    
+def setor(raio,angulo=360):
+    import math
+    return (angulo/180)*((math.pi*raio**2)/2)
+    
+def termos(a1, an, r):
+    return ((an-a1)/r)+1
+def soma_pa(a1, an, r):
+    return ((a1+an)*termos(a1,an,r))/2
+    
+def receita(a,b,c):
+    x1=a/2
+    x2=b/3
+    x3=c/5
+    return int(min(x1,x2,x3))
