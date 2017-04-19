@@ -1,0 +1,59 @@
+def absoluto(x):
+    import math as m
+    return int(m.fabs(x))
+    
+def raizes(a,b,c):
+    d = (b*b)-(4*a*c)
+    r1=(-b+(d**0.5))/(2*a)
+    r2=(-b-(d**0.5))/(2*a)
+    if d<0:
+        return 0
+    elif d==0:
+        return 1,r1,r2
+    elif d > 0:
+        return 2,r1,r2
+        
+def repeticao(st):
+    return str(st*3)
+    
+def f(x):
+    if 0<=x<= 2:
+        return x
+    elif 2<x<=3.5:
+        return 2
+    elif 3.5<x<=5:
+        return 3
+    elif 5<x<=6:
+        return x*x-10*x+28
+    else:
+        return "Não definido"
+        
+def min_max(x,y):
+    return min(x,y),max(x,y)
+    
+def meia_entrada(idade, estudante):
+    if idade<=21 or idade>=65 or estudante==True:
+        return True
+    else:
+        return False
+        
+def classificacao(Cv, Ce, Cs, Fv, Fe, Fs):
+    tc=cv*3 + ce*1
+    tf=fv*3 + fe*1
+    if tc>tf:
+        return "Cormengo"
+    elif tf>tc:
+        return "Flaminthians"
+    elif tc==tf:
+        if cs>fs:
+            return "Cormengo"
+        elif fs>cs:
+            return "Flaminthians"
+        elif fs==cs:
+            return "Empate"
+            
+def avioes(competidores, papel_comprado, papel_competidor):
+    if competidores*papel_competidor <= papel_comprado:
+        return "Suficiente"
+    else:
+        return "Insuficiente"
